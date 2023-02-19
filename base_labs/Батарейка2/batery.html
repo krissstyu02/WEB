@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet"
+          href="batery.css">
+  <style>
+    div{border: 0px solid black;}
+    /*width: 150px; height: 75px}*/
+
+    #parent
+    {
+    /*margin: 100px 100px 100px 100px;*/
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        /*height: 400px;*/
+        flex-wrap: wrap;
+    }
+
+  </style>
+</head>
+<body>
+<div id="parent">
+  <div class = "btr">
+      <div class = "del" style="background: limegreen;width: 16%;" ></div>
+      <div class = "del" style="background: limegreen;width: 16%;"></div>
+      <div class = "del" style="background: limegreen;width: 16%;"></div>
+      <div class = "del" style="background: limegreen;width: 16%;"></div>
+  </div>
+  <div class = "btr" style="justify-content: left">
+      <div class = "btr" style="width: 120px; border: white">
+          <div class = "del" style="background: greenyellow;width: 30%;" ></div>
+          <div class = "del" style="background: greenyellow;width: 30%;" ></div>
+          <div class = "del" style="background: greenyellow;width: 30%;" ></div>
+      </div>
+  </div>
+    <div class="btr" style="justify-content: left">
+        <div class = "btr" style="width: 80px; border: black">
+            <div class = "del" style="background: yellow;width: 45%;" ></div>
+            <div class = "del" style="background: yellow;width: 45%;" ></div>
+        </div>
+    </div>
+    <div class="btr" style="justify-content: left">
+        <div class = "btr" style="width: 40px; border: black">
+            <div class = "del" style="background: red;width: 80%;" ></div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

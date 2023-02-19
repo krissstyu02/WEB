@@ -1,0 +1,44 @@
+
+.green {
+
+    width: 70%;
+    height: 70px;
+    border:1px solid;
+    margin:10px 0 10px 0 ;
+    background: #73E139FF;
+    flex-shrink: 5;
+
+}
+
+
+.orange
+    {
+    width: 70%;
+    height: 70px;
+    border:1px solid;
+    margin:10px 0 10px 0 ;
+    background: linear-gradient(to left, rgba(255,176,46) 50%,
+    transparent 50%),linear-gradient(to right, rgb(255, 255, 255) 50%,
+    transparent 50%);
+    flex-shrink: 5;}
+
+.red
+    {
+    width: 70%;
+    height: 70px;
+    border:1px solid;
+    margin:10px 0 10px 0 ;
+    background: linear-gradient(to left, rgb(196, 15, 15) 15%, transparent 15%),linear-gradient(to right, rgb(255, 255, 255) 85%,
+    transparent 50%);
+    flex-shrink: 5;}
+
+.yellow
+    {
+    width: 70%;
+    height: 70px;
+    border:1px solid;
+    margin:10px 0 10px 0 ;
+    background: linear-gradient(to left, rgb(252, 224, 60) 75%, transparent 15%),linear-gradient(to right, rgb(255, 255, 255) 50%,
+    transparent 25%);
+    flex-shrink: 5;}
+
