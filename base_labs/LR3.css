@@ -1,0 +1,15 @@
+
+
+.black
+{
+    background: rgb(16, 16, 15);
+    position: absolute;
+}
+
+.white
+{
+    background: rgb(239, 238, 228);
+    position: relative;
+    top: 40px; left: 40px;
+}
+
