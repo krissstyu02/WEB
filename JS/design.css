@@ -1,0 +1,37 @@
+.first_text{
+    font-size: 50px;
+    font-family: "Open Sans", sans-serif, Roboto;
+    text-align: center;
+    height: 150px;
+}
+
+.content {
+    display: none;
+}
+#content1 {
+    display: flex;
+    font-size: 24px;
+    text-align: right;
+    margin-top: 40px;
+
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.menu {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+}
+.menu button {
+    height: 70px;
+    width: 400px;
+    background-color: #303435;
+    border: 5px solid #ffffff;
+    font-size: 20px;
+    color: #ffffff;
+}
