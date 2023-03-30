@@ -11,17 +11,25 @@
           href="design.css">
 <!--Вариант 3-->
 
-<body>
+<body style="background-color: #c9c4c4">
 <div class="first_text">Задания по JS Вариант-26</div>
 <div class="menu">
     <div>
         <button onclick="toggleContent(1); showDateTime();">Задание 1 </button>
         <div class="content" id="content1"></div>
+        <script>
+            setInterval(showDateTime, 1000)
+        </script>
     </div>
     <div>
-        <button onclick="toggleContent(2)">Задание 2</button>
+        <button onclick="toggleContent(2);">Задание 2</button>
         <div class="content" id="content2">
-            <p>Задание 2</p>
+
+                <div class="calendar-wrapper">
+                    <button id="btnPrev" type="button">Предыдущий</button>
+                    <button id="btnNext" type="button">Следующий</button>
+                    <div id="divCal"></div>
+                </div>
         </div>
     </div>
     <div>

@@ -1,3 +1,4 @@
+
 .first_text{
     font-size: 50px;
     font-family: "Open Sans", sans-serif, Roboto;
@@ -10,9 +11,10 @@
 }
 #content1 {
     display: flex;
-    font-size: 24px;
+    font-size: 30px;
     text-align: right;
     margin-top: 40px;
+    font-family: "Open Sans", sans-serif, Roboto;
 
 }
 .container {
@@ -31,7 +33,70 @@
     height: 70px;
     width: 400px;
     background-color: #303435;
-    border: 5px solid #ffffff;
     font-size: 20px;
     color: #ffffff;
+}
+
+
+.calendar-wrapper {
+    width: 360px;
+    margin: 3em auto;
+    padding: 2em;
+    border-radius: 5px;
+    background: #fff;
+}
+table {
+    clear: both;
+    width: 100%;
+    border: 2px solid #b6b0b0;
+    border-radius: 3px;
+    border-collapse: collapse;
+    color: #444;
+}
+td {
+    height: 48px;
+    text-align: center;
+    vertical-align: middle;
+    border-right: 1px solid #dcdcff;
+    border-top: 1px solid #dcdcff;
+    width: 14.28571429%;
+}
+thead td {
+    border: none;
+    color: #28283b;
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+td.not-current {
+    color: #c0c0c0;
+}
+td.today {
+    font-weight: 700;
+    color: #28283b;
+    background-color: silver;
+}
+
+td.weekend{
+    font-weight: 700;
+    color: red;
+}
+#btnPrev {
+    float: left;
+    width: 100px;
+    font-size: 15px;
+    height: 50px;
+    font-family: "Open Sans", sans-serif, Roboto;
+    background-color: #ffffff;
+    color: #706b6b;
+    border: 5px solid #ffffff;
+}
+
+#btnNext {
+    float: right;
+    width: 100px;
+    font-size: 15px;
+    height: 50px;
+    background-color: #ffffff;
+    color: #706b6b;
+    border: 5px solid #ffffff;
 }
