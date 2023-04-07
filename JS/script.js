@@ -7,6 +7,8 @@ function toggleContent(id)
     } else {
         content.style.display = "none";
     }
+    setInterval(showDateTime, 1000)
+    blocks()
 }
 
 function showDateTime(){
@@ -165,3 +167,33 @@ window.onload = function() {
 function getId(id) {
     return document.getElementById(id);
 }
+
+
+function blocks(id) {
+    // Получаем ссылку на родительский элемент
+    const parentElement = document.getElementById('parent-element');
+// Получаем массив всех блоков DOM-дерева внутри родительского элемента
+    const blocks = parentElement.querySelectorAll('.block');
+// Выводим количество элементов в блоке с заданным номером (например, блок с номером 2)
+    const blockNumber = 2;
+    const block = blocks[blockNumber - 1];
+    const count = block.querySelectorAll('*').length;
+    document.getElementById("divCount").innerHTML = `Количество элементов в блоке ${blockNumber}= ${count}`;
+}
+
+function task4() {
+    const parentElement = document.getElementById('content4');
+// Получаем все блоки и сохраняем их в массиве
+//     const blocks = parentElement.querySelectorAll('.block');
+    const blockss = parentElement.querySelectorAll('.quad');
+// Задаем интервал для перекрашивания блока каждые 150 миллисекунд
+    setInterval(function () {
+        // Выбираем случайный блок из массива блоков
+        var randomBlock = blockss[Math.floor(Math.random() * blockss.length)];
+        // Выбираем случайный цвет в формате HEX
+        var randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+        // Меняем фоновый цвет выбранного блока на выбранный цвет
+        randomBlock.style.backgroundColor = randomColor;
+    }, 150);
+}
+

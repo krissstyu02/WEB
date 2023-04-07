@@ -10,21 +10,18 @@
     <link rel="stylesheet"
           href="design.css">
 <!--Вариант 3-->
+</head>
 
 <body style="background-color: #c9c4c4">
 <div class="first_text">Задания по JS Вариант-26</div>
 <div class="menu">
     <div>
-        <button onclick="toggleContent(1); showDateTime();">Задание 1 </button>
+        <button onclick="toggleContent(1)">Задание 1 </button>
         <div class="content" id="content1"></div>
-        <script>
-            setInterval(showDateTime, 1000)
-        </script>
     </div>
     <div>
         <button onclick="toggleContent(2);">Задание 2</button>
         <div class="content" id="content2">
-
                 <div class="calendar-wrapper">
                     <button id="btnPrev" type="button">Предыдущий</button>
                     <button id="btnNext" type="button">Следующий</button>
@@ -35,9 +32,60 @@
     <div>
         <button onclick="toggleContent(3)">Задание 3</button>
         <div class="content" id="content3">
-            <p>Задание 3</p>
+            <div class="task3" id="parent-element">
+                <div class="block">
+                    <h2>Блок 1</h2>
+                    <p>Кот Барсик</p>
+                    <img src="https://www.zastavki.com/pictures/originals/2015/Animals___Cats_Funny_green-eyed_housecat_104739_.jpg" style="width: 400px;height: 300px">
+                    <p>Жизнь кота такая сложная..</p>
+                </div>
+
+                <div class="block">
+                    <h2>Блок 2</h2>
+                    <p>Кот Мурзик</p>
+                    <img src="https://omoro.ru/wp-content/uploads/2018/11/koty-50.jpg" style="width: 400px;height: 300px">
+                    <p>Плюсы быть котом</p>
+                    <ol>
+                        <li>9 жизней</li>
+                        <li>Обслуживающий персонал</li>
+                        <li>Ночное зрение и когти</li>
+                    </ol>
+                </div>
+
+                <div class="block">
+                    <h2>Блок 3</h2>
+                    <p>Кот Федор</p>
+                    <img src="https://funik.ru/wp-content/uploads/2018/10/Smeshnye-foto-kotov-i-koshek-rzhachnye-prikolnye-veselye-9.jpg" style="width: 400px;height: 300px">
+                    <p>Минусы быть котом</p>
+                    <ol>
+                        <li>Их нет!...ну ладно..</li>
+                        <li>Не могу открывать холодильник</li>
+                    </ol>
+                </div>
+
+            </div>
+            <h2 id="divCount"></h2>
         </div>
     </div>
+
+<!--    Через указанный промежуток времени 150мс перекрашивать блок (номер блока-->
+<!--    и цвет выбирается рандомно)-->
+    <div>
+        <button onclick="toggleContent(4) ;task4()" >Задание 4</button>
+        <div class="content" id="content4">
+        <div class="flex-block">
+            <div class="quad" >
+            </div>
+            <div class="quad">
+            </div>
+            <div class="quad" >
+            </div>
+            <div class="quad" ></div>
+        </div>
+        </div>
+    </div>
+
+
 </div>
 
 </body>
