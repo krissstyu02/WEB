@@ -1,4 +1,4 @@
-
+setInterval(showDateTime, 1000)
 function toggleContent(id)
 {
     var content = document.getElementById("content" + id);
@@ -7,7 +7,6 @@ function toggleContent(id)
     } else {
         content.style.display = "none";
     }
-    setInterval(showDateTime, 1000)
     blocks()
 }
 
@@ -184,7 +183,6 @@ function blocks(id) {
 function task4() {
     const parentElement = document.getElementById('content4');
 // Получаем все блоки и сохраняем их в массиве
-//     const blocks = parentElement.querySelectorAll('.block');
     const blockss = parentElement.querySelectorAll('.quad');
 // Задаем интервал для перекрашивания блока каждые 150 миллисекунд
     setInterval(function () {
@@ -197,3 +195,24 @@ function task4() {
     }, 150);
 }
 
+function task5() {
+    const startBtn = document.querySelector('#start-btn');
+    startBtn.addEventListener('click', () => {
+        const list = document.querySelector('#list');
+        for (let i = 0; ; i++) {
+            const content = prompt('Введите содержимое элемента списка:');
+            if (!content) break;
+            const listItem = document.createElement('li');
+            listItem.textContent = content;
+            list.insertBefore(listItem, list.firstChild);
+        }
+    });
+}
+
+function task6(){
+    let elem = document.getElementById('divEvent');
+    // elem.mouseout=elem.classList.replace('task6_block','task6_block_new');
+    elem.addEventListener("mouseout", ()=>{elem.classList.replace('task6_block','task6_block_new')});
+    elem.addEventListener("mouseover", ()=>{elem.classList.replace('task6_block_new','task6_block')});
+
+}

@@ -8,6 +8,7 @@
 
 .content {
     display: none;
+
 }
 #content1 {
     display: flex;
@@ -17,6 +18,13 @@
     font-family: "Open Sans", sans-serif, Roboto;
 
 }
+#content5 {
+    font-size: 30px;
+    margin-top: 40px;
+    font-family: "Open Sans", sans-serif, Roboto;
+
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -35,6 +43,15 @@
     background-color: #303435;
     font-size: 20px;
     color: #ffffff;
+}
+
+#content5 button{
+    height: 40px;
+    width: 140px;
+    background-color: #565353;
+    font-size: 10px;
+    color: #ffffff;
+    margin-bottom: 10px;
 }
 
 
@@ -127,4 +144,21 @@ td.weekend{
     flex-direction:row;
     justify-content: center;
     margin: 20px 0;
+}
+
+.task6_block{
+    margin: 20px;
+    border: 10px solid #ce5e5e;
+    height: 50px;
+    width: 400px;
+    font-style: italic;
+}
+
+.task6_block_new{
+    margin: 20px;
+    border: 5px solid #7ae542;
+    height: 70px;
+    width: 400px;
+    font-style: normal;
+    font-size: 30px;
 }
