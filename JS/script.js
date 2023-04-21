@@ -216,3 +216,58 @@ function task6(){
     elem.addEventListener("mouseover", ()=>{elem.classList.replace('task6_block_new','task6_block')});
 
 }
+
+function task7(){
+    const menuItems = document.querySelectorAll('.menu-item');
+    const result = document.getElementById('result');
+
+    function hideMenuItem(item, callback) {
+        //  устанавливает переходную анимацию (transition) для свойства opacity элемента (item),
+        //  которая будет длиться 1 секунду и будет происходить с плавным входом и выходом (ease-in-out)
+        item.style.transition = 'opacity 1s ease-in-out';
+        item.style.opacity = 0;
+        setTimeout(() => {
+            item.style.display = 'none';
+            callback();
+        }, 1000);
+    }
+
+    function startMenu() {
+        for (let i = 0; i < menuItems.length; i++) {
+            // проявляем
+            menuItems[i].style.display = 'block';
+            // обработчик события
+            menuItems[i].addEventListener('click', () => {
+                hideMenuItem(menuItems[i], () => {
+                    // меняем стиль
+                    const visibleItems = document.querySelectorAll('.menu-item[style*="display: block"]');
+                    if (visibleItems.length === 0) {
+                        result.textContent = "Что ты наделал?Сладости закончились :(";
+                    }
+                });
+            });
+        }
+    }
+    // при нажатии открывается меню
+    const title = document.querySelector('.title');
+    title.addEventListener('click', startMenu);
+}
+
+function task8(){
+    const image = document.getElementById('image');
+    const text = document.getElementById('text');
+
+    function handleMouseOver() {
+        text.style.opacity = 1;
+        image.style.opacity=0;
+    }
+
+    function handleMouseOut() {
+        text.style.opacity = 0;
+        image.style.opacity=1;
+    }
+
+    image.addEventListener('mouseover', handleMouseOver);
+    image.addEventListener('mouseout', handleMouseOut);
+
+}
