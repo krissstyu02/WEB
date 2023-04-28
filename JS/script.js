@@ -271,3 +271,222 @@ function task8(){
     image.addEventListener('mouseout', handleMouseOut);
 
 }
+
+
+function task9() {
+    const form = document.querySelector('.form');
+    const emailInput = document.getElementById('email-input');
+    const passwordInput = document.getElementById('password-input');
+    const confirmPasswordInput = document.getElementById('confirm-password-input');
+    const usernameInput = document.getElementById('username-input');
+    const phoneInput = document.getElementById('phone-input');
+    const nameInput = document.getElementById('name-input');
+    const facultyInput = document.getElementById('faculty-input');
+    const departmentInput = document.getElementById('department-input');
+
+    function validateDepartment(department) {
+        if (!(/^[A-Za-zА-Яа-яЁё\s-]{2,50}$/).test(department)) {
+            departmentInput.classList.add('is-invalid');
+            departmentInput.nextElementSibling.innerText = 'Введите корректное название кафедры, используя только буквы русского или латинского алфавита, пробелы и дефисы. Длина от 2 до 50 символов';
+            return false;
+        }
+        else {
+            departmentInput.classList.remove('is-invalid');
+            departmentInput.nextElementSibling.innerText = '';
+            return true;
+        }
+    }
+
+    function validateFullName(name) {
+        if (!(/^[A-Za-zА-Яа-яЁё\s-]{2,50}$/).test(name)) {
+            nameInput.classList.add('is-invalid');
+            nameInput.nextElementSibling.innerText = 'Введите корректное ФИО, используя только буквы русского или латинского алфавита, пробелы и дефисы. Длина от 2 до 50 символов';
+            return false;
+        }
+        else {
+            nameInput.classList.remove('is-invalid');
+            nameInput.nextElementSibling.innerText = '';
+            return true;
+        }
+    }
+    function validateFaculty(faculty) {
+        if (!(/^[A-Za-zА-Яа-яЁё\s-]{2,50}$/).test(faculty)) {
+            facultyInput.classList.add('is-invalid');
+            facultyInput.nextElementSibling.innerText = 'Введите корректное название факультета, используя только буквы русского или латинского алфавита, пробелы и дефисы. Длина от 2 до 50 символов';
+            return false;
+        }
+        else {
+            facultyInput.classList.remove('is-invalid');
+            facultyInput.nextElementSibling.innerText = '';
+            return true;
+        }
+    }
+    function validateLogin(login) {
+        if (!(/^[A-Za-z0-9_-]{3,16}$/).test(login)) {
+            usernameInput.classList.add('is-invalid');
+            usernameInput.nextElementSibling.innerText = 'Логин должен состоять из латинских букв, цифр, символов подчеркивания и дефисов, и иметь длину от 3 до 16 символов';
+            return false;
+        }
+        else {
+            usernameInput.classList.remove('is-invalid');
+            usernameInput.nextElementSibling.innerText = '';
+            return true;
+        }
+    }
+
+    function validatePhone(phone) {
+        if (!(/^8\d{10}$/).test(phone)) {
+            phoneInput.classList.add('is-invalid');
+            phoneInput.nextElementSibling.innerText = 'Введите корректный номер телефона в формате 8**********';
+            return false;
+        }
+        else {
+            phoneInput.classList.remove('is-invalid');
+            phoneInput.nextElementSibling.innerText = '';
+            return true;
+        }
+    }
+
+    function validateEmail(email) {
+        if (!(/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/).test(email)) {
+            emailInput.classList.remove('is-valid');
+            emailInput.classList.add('is-invalid');
+            emailInput.nextElementSibling.innerText = 'Введите корректный адрес электронной почты';
+            return false;
+        }
+        emailInput.classList.remove('is-invalid');
+        emailInput.classList.add('is-valid');
+        emailInput.nextElementSibling.innerText = '';
+        return true;
+    }
+
+    function validatePassword(password) {
+        if (!(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/).test(password)) {
+            passwordInput.classList.add('is-invalid');
+            passwordInput.nextElementSibling.innerText = 'Пароль должен содержать хотя бы одну цифру, одну заглавную букву, одну строчную букву и быть от 6 до 20 символов';
+            return false;
+        }
+        else {
+            passwordInput.classList.remove('is-invalid');
+            passwordInput.nextElementSibling.innerText = '';
+            return true;
+        }
+    }
+
+    function validateConfirmPassword(confirmPassword) {
+        if (passwordInput.value !== confirmPassword) {
+            confirmPasswordInput.classList.add('is-invalid');
+            confirmPasswordInput.nextElementSibling.innerText = 'Пароли не совпадают';
+            return false;
+        }
+        else {
+            confirmPasswordInput.classList.remove('is-invalid');
+            confirmPasswordInput.nextElementSibling.innerText = '';
+            return true;
+        }
+    }
+
+    function validateForm() {
+        let isValid = true;
+        const email = emailInput.value;
+        const password = passwordInput.value;
+        const confirmPassword = confirmPasswordInput.value;
+        const username = usernameInput.value;
+        const phone = phoneInput.value;
+        const name = nameInput.value;
+        const faculty = facultyInput.value;
+        const department=departmentInput.value;
+
+        if (!validateEmail(email)) {
+            isValid = false;
+        }
+
+        if (!validatePassword(password)) {
+            isValid = false;
+        }
+
+        if (!validateConfirmPassword(confirmPassword)) {
+            isValid = false;
+        }
+
+        if (!validateLogin(username)) {
+            isValid = false;
+        }
+
+        if (!validatePhone(phone)) {
+            isValid = false;
+        }
+
+        if (!validateFullName(name)) {
+            isValid = false;
+        }
+
+        if (!validateFaculty(faculty)) {
+            isValid = false;
+        }
+
+        if (!validateDepartment(department)) {
+            isValid = false;
+        }
+
+        return isValid;
+    }
+    function clearForm() {
+        emailInput.value = '';
+        passwordInput.value = '';
+        confirmPasswordInput.value = '';
+        usernameInput.value = '';
+        phoneInput.value = '';
+        nameInput.value = '';
+        facultyInput.value = '';
+        departmentInput.value = '';
+    }
+
+    form.addEventListener('submit', function(event) {
+        if (!validateForm()) {
+            event.preventDefault();
+        }
+        else {
+            event.preventDefault();
+            location.reload();
+            // Показываем сообщение об отправке
+            alert("Сообщение отправлено!");
+        }
+    });
+
+    emailInput.addEventListener('blur', function() {
+        validateEmail(emailInput.value);
+    });
+
+    passwordInput.addEventListener('blur', function() {
+        validatePassword(passwordInput.value);
+    });
+
+    confirmPasswordInput.addEventListener('blur', function() {
+        validateConfirmPassword(confirmPasswordInput.value);
+    });
+
+    usernameInput.addEventListener('blur', function() {
+        validateLogin(usernameInput.value);
+    });
+
+    phoneInput.addEventListener('blur', function() {
+        validatePhone(phoneInput.value);
+    });
+
+    nameInput.addEventListener('blur', function() {
+        validateFullName(nameInput.value);
+    });
+
+    facultyInput.addEventListener('blur', function() {
+        validateFaculty(facultyInput.value);
+    });
+
+    departmentInput.addEventListener('blur', function() {
+        validateDepartment(departmentInput.value);
+    });
+
+    const clearButton = document.getElementById('clear-button');
+    clearButton.addEventListener('click', clearForm);
+
+}
