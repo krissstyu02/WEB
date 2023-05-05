@@ -292,6 +292,7 @@ function task9() {
         }
         else {
             departmentInput.classList.remove('is-invalid');
+            departmentInput.classList.add('is-valid');
             departmentInput.nextElementSibling.innerText = '';
             return true;
         }
@@ -305,6 +306,7 @@ function task9() {
         }
         else {
             nameInput.classList.remove('is-invalid');
+            nameInput.classList.add('is-valid');
             nameInput.nextElementSibling.innerText = '';
             return true;
         }
@@ -317,6 +319,7 @@ function task9() {
         }
         else {
             facultyInput.classList.remove('is-invalid');
+            facultyInput.classList.add('is-valid');
             facultyInput.nextElementSibling.innerText = '';
             return true;
         }
@@ -329,6 +332,7 @@ function task9() {
         }
         else {
             usernameInput.classList.remove('is-invalid');
+            usernameInput.classList.add('is-valid');
             usernameInput.nextElementSibling.innerText = '';
             return true;
         }
@@ -342,6 +346,7 @@ function task9() {
         }
         else {
             phoneInput.classList.remove('is-invalid');
+            phoneInput.classList.add('is-valid');
             phoneInput.nextElementSibling.innerText = '';
             return true;
         }
@@ -368,6 +373,7 @@ function task9() {
         }
         else {
             passwordInput.classList.remove('is-invalid');
+            passwordInput.classList.add('is-valid');
             passwordInput.nextElementSibling.innerText = '';
             return true;
         }
@@ -381,6 +387,7 @@ function task9() {
         }
         else {
             confirmPasswordInput.classList.remove('is-invalid');
+            confirmPasswordInput.classList.add('is-valid');
             confirmPasswordInput.nextElementSibling.innerText = '';
             return true;
         }
